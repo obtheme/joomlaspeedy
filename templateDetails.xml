@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="2.5" type="template" method="upgrade">
+	<name>Speedy</name>
+	<creationDate>Oct 2013</creationDate>
+	<author>Thong Tran</author>
+	<copyright>Copyright © 2013 JoomlaSpeedy.com</copyright>
+	<authorEmail>info@joomlaspeedy.com</authorEmail>
+	<authorUrl>http://www.joomlaspeedy.com</authorUrl>
+	<version>3.1b</version>
+	<description><![CDATA[ 
+		<h1>Speedy Joomla Template</h1>
+		<p>The fastest and simplest Joomla Template ever using Twitter Bootstrap.</p>
+	]]></description>
+
+	<files>
+		<folder>assets</folder>
+		<folder>html</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>style</folder>
+		<filename>apple-touch-icon-114x114.png</filename>
+		<filename>apple-touch-icon-72x72.png</filename>
+		<filename>apple-touch-icon-57x57.png</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<positions>
+		<!-- define the positions for modules here -->
+		<position>drawer</position>
+		<position>top</position>
+		<position>header</position>
+		<position>navigation</position>
+		<position>showcase</position>
+		<position>feature</position>
+		<position>utility</position>
+		<position>breadcrumb</position>
+		<position>above</position>
+		<position>sidebar-a</position>
+		<position>sidebar-b</position>
+		<position>left</position>
+		<position>right</position>
+		<position>content-top</position>
+		<position>content-bottom</position>
+		<position>bottom</position>
+		<position>footer</position>
+		<position>copyright</position>
+		<position>debug</position>
+		<position>analytics</position>
+	</positions>
+
+	<config>
+		<!-- no need to change -->
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="layoutmode" type="list" default="3"
+					label="TPL_SPEEDY_LAYOUTMODE" description="TPL_SPEEDY_LAYOUTMODE_DESC">
+					<option value="responsive">Responsive</option>
+					<option value="1200px">1200px Fixed</option>
+					<option value="960px">960px Fixed</option>
+					<option value="flush">Flush</option>
+
+				</field>
+				<field name="columnWidth" type="list" default="3"
+					label="TPL_SPEEDY_COLUMNWIDTH" description="TPL_SPEEDY_COLUMNWIDTH_DESC">
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</field>
+				<field name="sidebarAWidth" type="list" default="2"
+					label="TPL_SPEEDY_SIDEBARAWIDTH" description="TPL_SPEEDY_SIDEBARAWIDTH_DESC">
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</field>
+				<field name="sidebarBWidth" type="list" default="2"
+					label="TPL_SPEEDY_SIDEBARBWIDTH" description="TPL_SPEEDY_SIDEBARBWIDTH_DESC">
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</field>
+				<field name="linkColor" type="Color" default="#2698de" label="LINK_COLOR" description="LINK_COLOR_DESC" setinsession="true"
+         setbysession="true" setincookie="true" setbycookie="true"/>
+				
+
+				<field type="spacer" hr="true" />
+
+			</fieldset>
+			<fieldset name="advance">
+				<field name="allow_in" type="list" default="site"
+					label="PLG_JBETOLO_FIELD_ALLOW_IN_LBL" description="PLG_JBETOLO_FIELD_ALLOW_IN_DESC">
+					<option value="anonymous">PLG_JBETOLO_ALLOW_IN_ANONYMOUS</option>
+					<option value="site">PLG_JBETOLO_ALLOW_IN_SITE</option>
+					<option value="administrator">PLG_JBETOLO_ALLOW_IN_ADMIN</option>
+					<option value="all">PLG_JBETOLO_ALLOW_IN_ALL</option>
+				</field>
+				<field name="htaccess" type="radio" default="0"
+					label="PLG_JBETOLO_HTACCESS_LBL" description="PLG_JBETOLO_HTACCESS_DESC">
+					<option value="0">PLG_JBETOLO_NO</option>
+					<option value="1">PLG_JBETOLO_YES</option>
+				</field>
+				<field name="html_minify" type="radio" default="0"
+					label="PLG_JBETOLO_HTML_MINIFY_LBL" description="PLG_JBETOLO_HTML_MINIFY_DESC">
+					<option value="1">PLG_JBETOLO_YES</option>
+					<option value="0">PLG_JBETOLO_NO</option>
+				</field>
+				<field name="dont_stat" type="radio" default="0"
+					label="PLG_JBETOLO_DONT_STAT_LBL" description="PLG_JBETOLO_DONT_STAT_DESC">
+					<option value="1">PLG_JBETOLO_YES</option>
+					<option value="0">PLG_JBETOLO_NO</option>
+				</field>
+			</fieldset>
+			<fieldset name="css">
+				<field name="css_merge_mode" type="radio" default="mono"
+					label="PLG_JBETOLO_MERGE_MODE_LBL" description="PLG_JBETOLO_MERGE_MODE_DESC">
+					<option value="resource">PLG_JBETOLO_MERGE_MODE_PER_RESOURCE</option>
+					<option value="mono">PLG_JBETOLO_MERGE_MODE_MONO</option>
+				</field>
+				<field name="css_merge" type="radio" default="1"
+					label="PLG_JBETOLO_MERGE_LBL" description="PLG_JBETOLO_MERGE_DESC">
+					<option value="0">PLG_JBETOLO_MERGE_NO</option>
+					<option value="1">PLG_JBETOLO_MERGE_YES</option>
+				</field>
+				<field name="css_merge_exclude" type="textarea" rows="5" cols="40"
+					default="" label="PLG_JBETOLO_EXCL_LBL" description="PLG_JBETOLO_EXCL_DESC"></field>
+				<field name="css_include" type="textarea" rows="5" cols="40"
+					default="" label="PLG_JBETOLO_INCL_LBL" description="PLG_JBETOLO_INCL_DESC"></field>
+				<field name="css_minify" type="radio" default="0"
+					label="PLG_JBETOLO_MINIFY_LBL" description="PLG_JBETOLO_MINIFY_DESC">
+					<option value="1">PLG_JBETOLO_YES</option>
+					<option value="0">PLG_JBETOLO_NO</option>
+				</field>
+				<field name="css_minify_excluded" type="radio" default="0"
+					label="PLG_JBETOLO_MINIFY_EXCL_LBL" description="PLG_JBETOLO_MINIFY_EXCL_DESC">
+					<option value="1">PLG_JBETOLO_YES</option>
+					<option value="0">PLG_JBETOLO_NO</option>
+				</field>
+				<field name="css_gzip" type="radio" default="1"
+					label="PLG_JBETOLO_GZIP_LBL" description="PLG_JBETOLO_GZIP_DESC">
+					<option value="1">PLG_JBETOLO_YES</option>
+					<option value="0">PLG_JBETOLO_NO</option>
+				</field>
+				<field name="css_gzip_excluded" type="radio" default="1"
+					label="PLG_JBETOLO_GZIP_EXCL_LBL" description="PLG_JBETOLO_GZIP_EXCL_DESC">
+					<option value="1">PLG_JBETOLO_YES</option>
+					<option value="0">PLG_JBETOLO_NO</option>
+				</field>
+				<field name="css_map_resources_absolute" type="radio" default="0"
+					label="PLG_JBETOLO_MAP_RESOURCES_ABSOLUTE_LBL" description="PLG_JBETOLO_MAP_RESOURCES_ABSOLUTE_DESC">
+					<option value="1">PLG_JBETOLO_YES</option>
+					<option value="0">PLG_JBETOLO_NO</option>
+				</field>
+				<field name="css_custom_order" type="textarea" rows="3" cols="40"
+					default="template.css" label="PLG_JBETOLO_CUSTOM_ORDER_LBL"
+					description="PLG_JBETOLO_CUSTOM_ORDER_DESC"></field>
+				<field name="css_compress_resources" type="text" rows="3"
+					size="70" default="eot,ttf,svg,otf" label="PLG_JBETOLO_CSS_COMPRESS_RESOURCES_LBL"
+					description="PLG_JBETOLO_CSS_COMPRESS_RESOURCES_DESC" />
+				<field name="css_datauri_allow_in" type="list" default="all"
+					label="PLG_JBETOLO_CSS_DATAURI_ENABLE_LBL" description="PLG_JBETOLO_CSS_DATAURI_ENABLE_DESC">
+					<option value="site">PLG_JBETOLO_ALLOW_IN_SITE</option>
+					<option value="administrator">PLG_JBETOLO_ALLOW_IN_ADMIN</option>
+					<option value="all">PLG_JBETOLO_ALLOW_IN_ALL</option>
+				</field>
+				<field name="css_datauri" type="textarea" cols="40" default=""
+					label="PLG_JBETOLO_CSS_DATAURI_LBL" description="PLG_JBETOLO_CSS_DATAURI_DESC" />
+				<field name="css_datauri_files" type="textarea" cols="40"
+					default="" label="PLG_JBETOLO_CSS_DATAURI_FILES_LBL" description="PLG_JBETOLO_CSS_DATAURI_FILES_DESC" />
+				<field name="css_datauri_max" type="text" cols="40" default="15000"
+					label="PLG_JBETOLO_CSS_DATAURI_MAXSIZE_LBL" description="PLG_JBETOLO_CSS_DATAURI_MAXSIZE_DESC" />
+				<field name="css_replace_from" type="textarea" cols="40"
+					default="" label="PLG_JBETOLO_CSS_REPLACE_FROM_LBL" description="PLG_JBETOLO_CSS_REPLACE_FROM_DESC" />
+				<field name="css_replace_to" type="textarea" cols="40"
+					default="" label="PLG_JBETOLO_CSS_REPLACE_TO_LBL" description="PLG_JBETOLO_CSS_REPLACE_TO_DESC" />
+				<field name="add_local_jquery_ui_css" type="radio" default="0"
+					label="PLG_JBETOLO_ALLOW_LOCAL_JQUERY_UI_CSS_LBL" description="PLG_JBETOLO_ALLOW_LOCAL_JQUERY_UI_CSS_DESC">
+					<option value="1">PLG_JBETOLO_YES</option>
+					<option value="0">PLG_JBETOLO_NO</option>
+				</field>
+			</fieldset>
+
+		</fields>
+	</config>
+
+</extension>
